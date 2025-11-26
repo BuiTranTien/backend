@@ -22,8 +22,14 @@ const bookSchema = new mongoose.Schema({
     type: String,
     require: true
   },
-  oldPrice:Number,
-  newPrice: Number,
+  oldPrice:{
+    type: Number,
+    require: true
+  },
+  newPrice: {
+    type: Number,
+    require: true
+  },
   createdAt:{
     type: Date,
     default: Date.now
