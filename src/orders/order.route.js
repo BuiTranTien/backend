@@ -6,4 +6,7 @@ const router = express.Router();
 // create order endpoint
 router.post("/", createAOrder)
 
+//get orders by email address
+router.get("/email/:email", getOrderByEmail)
+
 module.exports = router;
