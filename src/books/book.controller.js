@@ -2,7 +2,7 @@ const Book = require("./book.module");
 
 const postABook = async (req, res) => {
   try {
-    const newBook = await Book({ ...req.body })
+    const newBook = await new Book({ ...req.body })
     await newBook.save();
     res.status(200).send({ message: "Book posted", book: newBook })
   } catch (error) {
